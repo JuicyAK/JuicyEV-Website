@@ -26,6 +26,11 @@ html {
   @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
 }
 
+/* Glass effect */
+.glass-card {
+  @apply backdrop-blur-lg bg-white/70 border border-white/20;
+}
+
 /* Animation Keyframes */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
