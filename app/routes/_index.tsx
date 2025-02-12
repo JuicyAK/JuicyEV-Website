@@ -84,30 +84,21 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Features/Testimonials */}
-      <section className="snap-section h-screen bg-gradient-to-b from-blue-50 to-white relative flex items-center overflow-hidden">
+      {/* Features */}
+      <section className="snap-section min-h-screen bg-white relative flex items-center py-24">
         <div className="absolute inset-0 bg-grid opacity-10"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-6xl font-bold text-center mb-16">
-            Reviews
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-20">
+            Why Choose <span className="gradient-text">JUICY</span>
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={testimonial.name}
-                className="step-animation backdrop-blur-lg bg-white/70 rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="flex flex-col items-start">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mb-6">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-4">{testimonial.name}</h3>
-                  <p className="text-gray-600 leading-relaxed">{testimonial.quote}</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="step-animation hover-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                  {benefit.icon}
                 </div>
+                <h3 className="text-2xl font-semibold mb-4">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -368,22 +359,4 @@ const socialLinks = [
       </svg>
     ),
   },
-];
-
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    quote: "ChargeMobile has completely changed how I think about EV charging. No more planning my day around charging stations!",
-    avatar: "/images/testimonials/sarah.jpg"
-  },
-  {
-    name: "Michael Chen",
-    quote: "As a fleet manager, this service has been a game-changer. Our vehicles are always charged and ready to go.",
-    avatar: "/images/testimonials/michael.jpg"
-  },
-  {
-    name: "Emily Rodriguez",
-    quote: "The convenience is unmatched. I love that I can get my car charged while shopping or at work.",
-    avatar: "/images/testimonials/emily.jpg"
-  }
 ];
