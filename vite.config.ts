@@ -9,6 +9,7 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  base: "/JuicyEV-Website/", // <-- Set your GitHub repository name
   plugins: [
     remix({
       future: {
